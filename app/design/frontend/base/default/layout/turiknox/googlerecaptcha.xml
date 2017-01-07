@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Turiknox_Googlerecaptcha
+
+ * @category   Turiknox
+ * @package    Turiknox_Googlerecaptcha
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/turiknox/magento-google-recaptcha/LICENSE.md
+ * @version    1.0.0
+ */
+-->
+<layout>
+    <default>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>googlerecaptcha/css/googlerecaptcha.css</name>
+            </action>
+        </reference>
+    </default>
+</layout>

@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Turiknox_Googlerecaptcha
+
+ * @category   Turiknox
+ * @package    Turiknox_Googlerecaptcha
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/turiknox/magento-google-recaptcha/LICENSE.md
+ * @version    1.0.0
+ */
+-->
+<config>
+    <sections>
+        <google>
+            <groups>
+                <recaptcha translate="label">
+                    <label>Google reCAPTCHA</label>
+                    <sort_order>999</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enable translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable>
+                        <sitekey translate="label">
+                            <label>Site Key</label>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Sign up for <a href="https://www.google.com/recaptcha" target="_blank">Google reCAPTCHA</a> to receive this key]]></comment>
+                        </sitekey>
+                        <secretkey translate="label">
+                            <label>Secret Key</label>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Sign up for <a href="https://www.google.com/recaptcha" target="_blank">Google reCAPTCHA</a> to receive this key]]></comment>
+                        </secretkey>
+                        <theme translate="label">
+                            <label>reCAPTCHA Theme</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>40</sort_order>
+                            <source_model>turiknox_googlerecaptcha/source_theme</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </theme>
+                        <type translate="label">
+                            <label>reCAPTCHA Type</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>50</sort_order>
+                            <source_model>turiknox_googlerecaptcha/source_type</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </type>
+                        <size translate="label">
+                            <label>reCAPTCHA Size</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>60</sort_order>
+                            <source_model>turiknox_googlerecaptcha/source_size</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </size>
+                        <forms translate="label">
+                            <label>Use reCAPTCHA on Forms</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <sort_order>70</sort_order>
+                            <source_model>turiknox_googlerecaptcha/source_forms</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </forms>
+                    </fields>
+                </recaptcha>
+            </groups>
+        </google>
+    </sections>
+</config>

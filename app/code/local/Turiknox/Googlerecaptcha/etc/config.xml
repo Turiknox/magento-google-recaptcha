@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Turiknox_Googlerecaptcha
+
+ * @category   Turiknox
+ * @package    Turiknox_Googlerecaptcha
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/turiknox/magento-google-recaptcha/LICENSE.md
+ * @version    1.0.0
+ */
+-->
+<config>
+    <modules>
+        <Turiknox_Googlerecaptcha>
+            <version>1.0.0</version>
+        </Turiknox_Googlerecaptcha>
+    </modules>
+    <global>
+        <blocks>
+            <turiknox_googlerecaptcha>
+                <class>Turiknox_Googlerecaptcha_Block</class>
+            </turiknox_googlerecaptcha>
+        </blocks>
+        <helpers>
+            <turiknox_googlerecaptcha>
+                <class>Turiknox_Googlerecaptcha_Helper</class>
+            </turiknox_googlerecaptcha>
+        </helpers>
+        <models>
+            <turiknox_googlerecaptcha>
+                <class>Turiknox_Googlerecaptcha_Model</class>
+            </turiknox_googlerecaptcha>
+        </models>
+        <events>
+            <core_block_abstract_to_html_before>
+                <observers>
+                    <turiknox_googlerecaptcha>
+                        <type>singleton</type>
+                        <class>turiknox_googlerecaptcha/observer</class>
+                        <method>injectGoogleRecaptcha</method>
+                    </turiknox_googlerecaptcha>
+                </observers>
+            </core_block_abstract_to_html_before>
+        </events>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <turiknox_googlerecaptcha>
+                    <file>turiknox/googlerecaptcha.xml</file>
+                </turiknox_googlerecaptcha>
+            </updates>
+        </layout>
+    </frontend>
+</config>

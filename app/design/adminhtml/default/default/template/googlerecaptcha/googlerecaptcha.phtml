@@ -1,0 +1,40 @@
+<?php
+/*
+ * Turiknox_Googlerecaptcha
+
+ * @category   Turiknox
+ * @package    Turiknox_Googlerecaptcha
+ * @copyright  Copyright (c) 2017 Turiknox
+ * @license    https://github.com/turiknox/magento-google-recaptcha/LICENSE.md
+ * @version    1.0.0
+ */
+?>
+<?php if ($this->isAllowed($this->getAction()->getFullActionName())) : ?>
+    <div class="recaptcha">
+        <div id="g-recaptcha" class="g-recaptcha" style="clear: both; overflow: hidden; padding: 5px 0;"></div>
+        <input type="checkbox" id="recaptcha-checkbox" name="recaptcha-checkbox" value="" class="required-entry" style="visibility: hidden; position: absolute; left: -1000000px;" />
+    </div>
+    <script type="text/javascript">
+        var onloadCallback = function() {
+
+            var chkEl = $('recaptcha-checkbox');
+            grecaptcha.render('g-recaptcha', {
+                'sitekey' : '<?php echo $this->getGoogleRecaptchaSiteKey(); ?>',
+                'theme': '<?php echo $this->getGoogleRecaptchaTheme(); ?>',
+                'type': '<?php echo $this->getGoogleRecaptchaType(); ?>',
+                'size': '<?php echo $this->getGoogleRecaptchaSize(); ?>',
+                'callback': function(response) {
+                    if (response.length) {
+                        chkEl.writeAttribute('value', 'checked');
+                        chkEl.checked = true;
+                    }
+                },
+                'expired-callback': function() {
+                    chkEl.writeAttribute('value', '');
+                    chkEl.checked = false;
+                }
+            });
+        };
+    </script>
+    <?php echo $this->getGoogleRecaptchaScript(); ?>
+<?php endif; ?>
