@@ -1,0 +1,10 @@
+{
+  "name": "turkinox/magento-google-recaptcha",
+  "license": "MIT",
+  "type": "magento-module",
+  "description": "A module that will allow you to use the popular v2 Google reCAPTCHA on multiple forms on your Magento store.",
+  "homepage": "https://github.com/Turiknox/magento-google-recaptcha",
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*"
+  }
+}
