@@ -1,4 +1,4 @@
-app/code/local/Turiknox/Googlerecaptcha app/code/local/Turiknox/Googlerecaptcha
+app/code/community/Turiknox/Googlerecaptcha app/code/community/Turiknox/Googlerecaptcha
 app/design/adminhtml/default/default/template/googlerecaptcha app/design/adminhtml/default/default/template/googlerecaptcha
 app/design/frontend/base/default/layout/turiknox/googlerecaptcha.xml app/design/frontend/base/default/layout/turiknox/googlerecaptcha.xml
 app/design/frontend/base/default/template/googlerecaptcha app/design/frontend/base/default/template/googlerecaptcha
